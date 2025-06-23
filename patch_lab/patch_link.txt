@@ -13,3 +13,52 @@ sudo apt install -y \
   libsqlite3-dev \
   libusb-1.0-0-dev
 
+
+-------------------------------
+CONSTRUCTION D’UN REFERENTIEL LOCAL AVEC REPREPRO
+
+
+Dans le cadre de notre projet, nous allons mettre en œuvre un référentiel local afin de permettre la mise à jour de notre infrastructure en local sans forcément dépendre du monde extérieur.
+Pour mieux rendre ce projet viable il faudra procéder de la manière de la manière ci-après :
+
+1.	Installation d’un serveur web ( nginx ou apache2)
+2.	Installation du logiciel reprepro
+3.	Accéder à /var/www et créer un dossier debian
+4.	Accéder au dossier debian et créer deux répertoire ( conf et incoming)
+5.	Sudo nano /var/www/debian/conf/distribution (remplir cela en fonction  en fonction de la distribution Linux et nous n’aurons besoin que de la branche main
+6.	
+ 
+
+7.	Pas de clé pour le moment
+8.	sudo chown -R www-data:www-data /var/www/debian/
+9.	sudo apt update
+10.	wget https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.3.tar.bz2
+11.	tar -xjf gnupg-2.4.3.tar.bz2
+12.	ls
+13.	cd gnupg-2.4.3/
+14.	ls
+15.	./configure --prefix=/usr/local
+16.	make
+17.	ls
+18.	sudo make install
+19.	make check
+20.	hash –r
+21.	gpg –version
+22.	gpg --full-generate-key
+23.	gpg --list-keys
+24.	ls
+25.	cd ..
+26.	ls la ~/.gnupg/
+27.	cd gnupg-2.4.3/
+28.	ls
+29.	cd ..
+30.	gpg --list-secret-keys
+31.	gpg --list-secret-keys
+32.	gpg –version
+33.	lsb_release –c
+34.	gpg --list-secret-keys
+35.	gpg --list-keys --keyid-format LONG
+36.	
+
+
+
