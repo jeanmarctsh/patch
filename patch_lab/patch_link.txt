@@ -62,3 +62,17 @@ Pour mieux rendre ce projet viable il faudra procéder de la manière de la mani
 
 
 
++-----------------------
+sudo apt install -y \
+  build-essential \
+  libgpg-error-dev \
+  libgcrypt20-dev \
+  libksba-dev \
+  libassuan-dev \
+  libnpth0-dev \
+  zlib1g-dev \
+  libbz2-dev \
+  libreadline-dev \
+  gettext \
+  libsqlite3-dev \
+  libusb-1.0-0-dev
